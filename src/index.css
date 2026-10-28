@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+/* Default */
+:root {
+  --bg: #14110f;
+  --surface: #211c18;
+  --accent: #f6f1ea;
+  --text: #b0a598;
+  --text-muted: #f5a524;
+  --on-accent: #14110f;
+}
+
+/*  Light mode */
+[data-theme="light"] {
+  --bg: #fffbf5;
+  --surface: #f4ece0;
+  --text: #1c1713;
+  --text-muted: #6b5f52;
+  --accent: #b35c00;
+  --on-accent: #ffffff;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
