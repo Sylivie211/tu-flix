@@ -3,6 +3,7 @@ import "./App.css";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -39,7 +40,13 @@ function App() {
       <h1>Tu-Flix</h1>
       <ul>
         {movies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
+          <li key={movie.id}>
+            <img
+              src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+              alt={movie.title}
+            />
+            <p>{movie.title}</p>
+          </li>
         ))}
       </ul>
     </div>
