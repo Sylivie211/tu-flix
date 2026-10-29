@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import MovieCard from "./components/MovieCard";
+import Navbar from "./components/Navbar";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -38,8 +39,9 @@ function App() {
 
   return (
     <div>
-      <h1>Tu-Flix</h1>
-      <ul>
+      {/*       <h1>Tu-Flix</h1> */}
+      <Navbar />
+      <ul className="movie-grid">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
