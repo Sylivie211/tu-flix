@@ -1,0 +1,40 @@
+.hero {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg) 0%, transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.hero-title {
+  color: var(--text-muted);
+  opacity: 0.55;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-overview {
+  color: var(--text);
+  opacity: 0.5;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
